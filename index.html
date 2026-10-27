@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ButchersOnline — Email Templates Dashboard</title>
+    <title>ButchersOnline — Outreach Campaign Dashboard</title>
     <style>
       * {
         box-sizing: border-box;
@@ -16,48 +16,59 @@
       body {
         background-color: #f4f4f6;
         color: #222;
-        padding: 40px 20px;
+        padding: 50px 20px;
+        line-height: 1.5;
       }
       .container {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 0 auto;
         background: #ffffff;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 50px 40px;
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
       }
+
       header {
         text-align: center;
         border-bottom: 2px solid #eaeaea;
-        padding-bottom: 24px;
-        margin-bottom: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
       }
       h1 {
-        font-size: 26px;
+        font-size: 30px;
         color: #4a120e;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        font-weight: 700;
       }
       p.subtitle {
-        color: #666;
-        font-size: 15px;
+        color: #555;
+        font-size: 16px;
+        max-width: 650px;
+        margin: 0 auto;
       }
+
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 30px;
       }
+
       .card {
-        border: 1px solid #e5e5e5;
-        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
         overflow: hidden;
         background: #faf9f8;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
       }
       .card-header {
-        padding: 14px 16px;
+        padding: 18px 20px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 17px;
         text-align: center;
         color: #ffffff;
+        letter-spacing: 0.5px;
       }
       .header-a {
         background: #8c2d19;
@@ -68,43 +79,92 @@
       .header-c {
         background: #1e5e3a;
       } /* Segment C Forest Green */
-      .card-body {
-        padding: 16px;
-      }
-      .email-label {
+
+      .card-subtext {
+        background: #efece9;
+        padding: 12px 18px;
         font-size: 13px;
+        color: #555;
+        border-bottom: 1px solid #e0e0e0;
+        font-style: italic;
+        text-align: center;
+      }
+
+      .card-body {
+        padding: 24px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .email-block {
+        background: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 16px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .email-block:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        border-color: #d4af37;
+      }
+
+      .email-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .email-title {
+        font-size: 14px;
         font-weight: bold;
         color: #4a120e;
         text-transform: uppercase;
-        margin: 14px 0 6px 0;
         letter-spacing: 0.5px;
       }
-      .email-label:first-child {
-        margin-top: 0;
+      .email-phase {
+        font-size: 12px;
+        background: #f0e6d8;
+        color: #8c2d19;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: 600;
       }
+
+      .email-desc {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
       .btn-link {
-        display: block;
+        display: inline-block;
+        width: 100%;
         padding: 10px 14px;
-        margin-bottom: 6px;
-        background: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        color: #222;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        transition: all 0.2s ease;
-      }
-      .btn-link:hover {
         background: #4a120e;
         color: #ffffff;
-        border-color: #4a120e;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        transition: background 0.2s ease;
       }
+      .btn-link:hover {
+        background: #2b0a08;
+      }
+
       footer {
         text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
         font-size: 13px;
-        color: #888;
+        color: #777;
+        border-top: 1px solid #eaeaea;
+        padding-top: 24px;
       }
     </style>
   </head>
@@ -112,105 +172,200 @@
     <div class="container">
       <header>
         <h1>🥩 ButchersOnline.ca — Email Outreach Campaign</h1>
-        <p class="subtitle">Segment-wise preview dashboard for review.</p>
+        <p class="subtitle">
+          Complete segment-by-segment review dashboard outlining 3 targeted
+          email phases for craft butcher shops across Canada.
+        </p>
       </header>
 
       <div class="grid">
         <!-- SEGMENT A -->
         <div class="card">
-          <div class="card-header header-a">Segment A: No Website</div>
+          <div class="card-header header-a">Segment A</div>
+          <div class="card-subtext">No Website (Highest Opportunity)</div>
           <div class="card-body">
-            <div class="email-label">Email 1 (Day 1)</div>
-            <a
-              class="btn-link"
-              href="email-1/segment-a/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 1 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 1</span>
+                <span class="email-phase">Day 1</span>
+              </div>
+              <div class="email-desc">
+                Introduce the online opportunity. Highlight how local customers
+                search online but can't find them.
+              </div>
+              <a
+                class="btn-link"
+                href="email-1/segment-a/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 2 (Day 3)</div>
-            <a
-              class="btn-link"
-              href="email-2/segment-a/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 2 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 2</span>
+                <span class="email-phase">Day 3</span>
+              </div>
+              <div class="email-desc">
+                Build relevance and value. Show a real example of a butcher shop
+                online and how easy it is.
+              </div>
+              <a
+                class="btn-link"
+                href="email-2/segment-a/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 3 (Day 6)</div>
-            <a
-              class="btn-link"
-              href="email-3/segment-a/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 3 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 3</span>
+                <span class="email-phase">Day 6</span>
+              </div>
+              <div class="email-desc">
+                Make the business case. Discuss brief ROI and invite them to a
+                10–15 min introductory call.
+              </div>
+              <a
+                class="btn-link"
+                href="email-3/segment-a/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
           </div>
         </div>
 
         <!-- SEGMENT B -->
         <div class="card">
-          <div class="card-header header-b">
-            Segment B: Website, No E-Commerce
-          </div>
+          <div class="card-header header-b">Segment B</div>
+          <div class="card-subtext">Website, No E-Commerce</div>
           <div class="card-body">
-            <div class="email-label">Email 1 (Day 1)</div>
-            <a
-              class="btn-link"
-              href="email-1/segment-b/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 1 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 1</span>
+                <span class="email-phase">Day 1</span>
+              </div>
+              <div class="email-desc">
+                Take their existing website to the next level by letting
+                customers order directly online.
+              </div>
+              <a
+                class="btn-link"
+                href="email-1/segment-b/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 2 (Day 3)</div>
-            <a
-              class="btn-link"
-              href="email-2/segment-b/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 2 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 2</span>
+                <span class="email-phase">Day 3</span>
+              </div>
+              <div class="email-desc">
+                Show an example of online ordering integrated smoothly into an
+                existing shop website.
+              </div>
+              <a
+                class="btn-link"
+                href="email-2/segment-b/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 3 (Day 6)</div>
-            <a
-              class="btn-link"
-              href="email-3/segment-b/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 3 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 3</span>
+                <span class="email-phase">Day 6</span>
+              </div>
+              <div class="email-desc">
+                Turn browsers into buyers. Focus on growing their customer base
+                and repeat sales.
+              </div>
+              <a
+                class="btn-link"
+                href="email-3/segment-b/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
           </div>
         </div>
 
         <!-- SEGMENT C -->
         <div class="card">
-          <div class="card-header header-c">Segment C: Third-Party Only</div>
+          <div class="card-header header-c">Segment C</div>
+          <div class="card-subtext">Basic E-Commerce (Third-Party Only)</div>
           <div class="card-body">
-            <div class="email-label">Email 1 (Day 1)</div>
-            <a
-              class="btn-link"
-              href="email-1/segment-c/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 1 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 1</span>
+                <span class="email-phase">Day 1</span>
+              </div>
+              <div class="email-desc">
+                Address heavy third-party commissions (UberEats/DoorDash) and
+                promote direct customer relationships.
+              </div>
+              <a
+                class="btn-link"
+                href="email-1/segment-c/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 2 (Day 3)</div>
-            <a
-              class="btn-link"
-              href="email-2/segment-c/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 2 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 2</span>
+                <span class="email-phase">Day 3</span>
+              </div>
+              <div class="email-desc">
+                Compare third-party apps vs. their own store. Highlight lower
+                fees, branding, and owned customer data.
+              </div>
+              <a
+                class="btn-link"
+                href="email-2/segment-c/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
 
-            <div class="email-label">Email 3 (Day 6)</div>
-            <a
-              class="btn-link"
-              href="email-3/segment-c/template-v1.html"
-              target="_blank"
-              >📄 View Template</a
-            >
+            <!-- Email 3 -->
+            <div class="email-block">
+              <div class="email-meta">
+                <span class="email-title">Email 3</span>
+                <span class="email-phase">Day 6</span>
+              </div>
+              <div class="email-desc">
+                Smarter ordering strategy. Show financial impact of reducing
+                third-party fees and building loyalty.
+              </div>
+              <a
+                class="btn-link"
+                href="email-3/segment-c/template-v1.html"
+                target="_blank"
+                >📄 Preview Template V1</a
+              >
+            </div>
           </div>
         </div>
       </div>
 
       <footer>
         © 2026 ButchersOnline Canada — Internal Outreach Campaign Review
+        Dashboard
       </footer>
     </div>
   </body>
