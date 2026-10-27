@@ -1,88 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ButchersOnline — Email Templates Dashboard</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    body { background-color: #F4F4F6; color: #222; padding: 40px 20px; }
-    .container { max-width: 900px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-    header { text-align: center; border-bottom: 2px solid #EAEAEA; padding-bottom: 24px; margin-bottom: 30px; }
-    h1 { font-size: 26px; color: #4A120E; margin-bottom: 8px; }
-    p.subtitle { color: #666; font-size: 15px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-    .card { border: 1px solid #E5E5E5; border-radius: 8px; overflow: hidden; background: #FAF9F8; }
-    .card-header { background: #4A120E; color: #FFFFFF; padding: 12px 16px; font-weight: bold; font-size: 16px; text-align: center; }
-    .card-body { padding: 16px; }
-    .segment-title { font-size: 13px; font-weight: bold; color: #C58B13; text-transform: uppercase; margin: 12px 0 6px 0; letter-spacing: 0.5px; }
-    .segment-title:first-child { margin-top: 0; }
-    .btn-link { display: block; padding: 10px 14px; margin-bottom: 6px; background: #FFFFFF; border: 1px solid #DDD; border-radius: 6px; color: #222; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.2s ease; }
-    .btn-link:hover { background: #4A120E; color: #FFFFFF; border-color: #4A120E; }
-    footer { text-align: center; margin-top: 30px; font-size: 13px; color: #888; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ButchersOnline — Email Templates Dashboard</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+      body {
+        background-color: #f4f4f6;
+        color: #222;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+      header {
+        text-align: center;
+        border-bottom: 2px solid #eaeaea;
+        padding-bottom: 24px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        font-size: 26px;
+        color: #4a120e;
+        margin-bottom: 8px;
+      }
+      p.subtitle {
+        color: #666;
+        font-size: 15px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .card {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #faf9f8;
+      }
+      .card-header {
+        padding: 14px 16px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .header-a {
+        background: #8c2d19;
+      } /* Segment A Burgundy */
+      .header-b {
+        background: #c58b13;
+      } /* Segment B Gold/Amber */
+      .header-c {
+        background: #1e5e3a;
+      } /* Segment C Forest Green */
+      .card-body {
+        padding: 16px;
+      }
+      .email-title {
+        font-size: 13px;
+        font-weight: bold;
+        color: #4a120e;
+        text-transform: uppercase;
+        margin: 12px 0 6px 0;
+        letter-spacing: 0.5px;
+      }
+      .email-title:first-child {
+        margin-top: 0;
+      }
+      .btn-link {
+        display: block;
+        padding: 10px 14px;
+        margin-bottom: 6px;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        color: #222;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .btn-link:hover {
+        background: #4a120e;
+        color: #ffffff;
+        border-color: #4a120e;
+      }
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🥩 ButchersOnline.ca — Email Outreach Campaign</h1>
+        <p class="subtitle">Segment-wise preview dashboard for review.</p>
+      </header>
 
-  <div class="container">
-    <header>
-      <h1>🥩 ButchersOnline.ca — Email Outreach Templates</h1>
-      <p class="subtitle">Select any template below to preview the live email layout in your browser.</p>
-    </header>
+      <div class="grid">
+        <!-- SEGMENT A -->
+        <div class="card">
+          <div class="card-header header-a">Segment A: No Website</div>
+          <div class="card-body">
+            <div class="email-title">Email 1 (Day 1)</div>
+            <a
+              class="btn-link"
+              href="email-1/segment-a/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
 
-    <div class="grid">
-      
-      <!-- EMAIL 1 -->
-      <div class="card">
-        <div class="card-header">Email 1: Storefront Launch</div>
-        <div class="card-body">
-          <div class="segment-title">Segment A</div>
-          <a class="btn-link" href="email-1/segment-a/template-v1.html" target="_blank">📄 Template V1</a>
+            <div class="email-title">Email 2 (Day 3)</div>
+            <a
+              class="btn-link"
+              href="email-2/segment-a/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
 
-          <div class="segment-title">Segment B</div>
-          <a class="btn-link" href="email-1/segment-b/template-v1.html" target="_blank">📄 Template V1</a>
+            <div class="email-title">Email 3 (Day 6)</div>
+            <a
+              class="btn-link"
+              href="email-3/segment-a/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+          </div>
+        </div>
 
-          <div class="segment-title">Segment C</div>
-          <a class="btn-link" href="email-1/segment-c/template-v1.html" target="_blank">📄 Template V1</a>
+        <!-- SEGMENT B -->
+        <div class="card">
+          <div class="card-header header-b">
+            Segment B: Website, No E-Commerce
+          </div>
+          <div class="card-body">
+            <div class="email-title">Email 1 (Day 1)</div>
+            <a
+              class="btn-link"
+              href="email-1/segment-b/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+
+            <div class="email-title">Email 2 (Day 3)</div>
+            <a
+              class="btn-link"
+              href="email-2/segment-b/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+
+            <div class="email-title">Email 3 (Day 6)</div>
+            <a
+              class="btn-link"
+              href="email-3/segment-b/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+          </div>
+        </div>
+
+        <!-- SEGMENT C -->
+        <div class="card">
+          <div class="card-header header-c">Segment C: Third-Party Only</div>
+          <div class="card-body">
+            <div class="email-title">Email 1 (Day 1)</div>
+            <a
+              class="btn-link"
+              href="email-1/segment-c/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+
+            <div class="email-title">Email 2 (Day 3)</div>
+            <a
+              class="btn-link"
+              href="email-2/segment-c/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+
+            <div class="email-title">Email 3 (Day 6)</div>
+            <a
+              class="btn-link"
+              href="email-3/segment-c/template-v1.html"
+              target="_blank"
+              >📄 View Template</a
+            >
+          </div>
         </div>
       </div>
 
-      <!-- EMAIL 2 -->
-      <div class="card">
-        <div class="card-header">Email 2: Special Feature</div>
-        <div class="card-body">
-          <div class="segment-title">Segment A</div>
-          <a class="btn-link" href="email-2/segment-a/template-v1.html" target="_blank">📄 Template V1</a>
-
-          <div class="segment-title">Segment B</div>
-          <a class="btn-link" href="email-2/segment-b/template-v1.html" target="_blank">📄 Template V1</a>
-
-          <div class="segment-title">Segment C</div>
-          <a class="btn-link" href="email-2/segment-c/template-v1.html" target="_blank">📄 Template V1</a>
-        </div>
-      </div>
-
-      <!-- EMAIL 3 -->
-      <div class="card">
-        <div class="card-header">Email 3: Follow Up</div>
-        <div class="card-body">
-          <div class="segment-title">Segment A</div>
-          <a class="btn-link" href="email-3/segment-a/template-v1.html" target="_blank">📄 Template V1</a>
-
-          <div class="segment-title">Segment B</div>
-          <a class="btn-link" href="email-3/segment-b/template-v1.html" target="_blank">📄 Template V1</a>
-
-          <div class="segment-title">Segment C</div>
-          <a class="btn-link" href="email-3/segment-c/template-v1.html" target="_blank">📄 Template V1</a>
-        </div>
-      </div>
-
+      <footer>
+        © 2026 ButchersOnline Canada — Internal Outreach Campaign Review
+      </footer>
     </div>
-
-    <footer>
-      © 2026 ButchersOnline Canada — Internal Outreach Campaign Review
-    </footer>
-  </div>
-
-</body>
+  </body>
 </html>
